@@ -1,0 +1,329 @@
+<!DOCTYPE html> 
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Voucher Giveaways</title>
+    <style>
+        /* Configurare globala */
+        body {
+            font-family: 'Arial', sans-serif, 'Noto Color Emoji';
+            margin: 0;
+            padding: 0;
+            background: url('create an visualisation of one of the most secret and unique markets ever.jpg') no-repeat center center fixed;
+            background-size: contain;
+            color: #000000;
+        }
+
+        header {
+            background: linear-gradient(120deg, black, purple, darkblue);
+            padding: 20px 10px;
+            text-align: center;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: #FFFFFF;
+        }
+
+        .link-container {
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        .choose-gift-box {
+            display: inline-block;
+            background: linear-gradient(135deg, black, purple, darkblue);
+            color: #FF5B00;
+            padding: 15px 25px;
+            font-size: 1.5rem;
+            font-weight: bold;
+            border-radius: 8px;
+            border: 3px solid darkblue;
+            box-shadow: 0 4px 10px rgba(0, 0, 139, 0.5);
+            cursor: not-allowed;
+        }
+
+        .logo-links-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 20px 0;
+        }
+
+        .logo-link {
+            margin: 0 20px;
+        }
+
+        .logo-link img {
+            width: 150px;
+            height: auto;
+            border: 3px solid darkblue;
+            border-radius: 8px;
+            transition: transform 0.3s ease;
+        }
+
+        .logo-link img:hover {
+            transform: scale(1.1);
+            box-shadow: 0 4px 15px rgba(0, 0, 139, 0.5);
+        }
+
+        .cta-section {
+            background: rgba(0, 0, 0, 0.8);
+            color: #FFFFFF;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 40px auto;
+            max-width: 600px;
+            text-align: center;
+            box-shadow: 0 4px 10px rgba(255, 0, 0, 0.5);
+        }
+
+        .cta-section h2 {
+            font-size: 2rem;
+            margin-bottom: 15px;
+        }
+
+        .cta-section p {
+            font-size: 1.2rem;
+            line-height: 1.6;
+        }
+
+        /* Tabelul cu slider pentru produse */
+        .product-slider-container {
+            overflow: hidden;
+            width: 100%;
+            margin-top: 20px;
+        }
+
+        .product-slider {
+            display: flex;
+            animation: slide 10s linear infinite; /* Durata mai scurta, dar inca destul de rapida */
+        }
+
+        .product-slider a {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-decoration: none;
+            color: #000000;
+            margin-right: 20px;
+            min-width: 160px; /* Asigura la?imea constanta pentru fiecare produs */
+        }
+
+        .product-slider img {
+            width: 160px; /* Marirea imaginii */
+            height: 160px;
+            object-fit: contain; /* Asigura ca imaginea se va incadra fara a fi taiata */
+            border-radius: 8px;
+        }
+
+        .product-slider .product-price {
+            font-size: 1rem;
+            margin-top: 10px;
+            font-weight: bold;
+        }
+
+        @keyframes slide {
+            0% {
+                transform: translateX(0); /* La inceput, slider-ul incepe de la prima imagine */
+            }
+            100% {
+                transform: translateX(-100%); /* Se mi?ca la toata la?imea slider-ului, astfel incat ultima imagine este complet vizibila */
+            }
+        }
+
+        .win-box {
+            background-color: rgba(0, 255, 0, 0.8);
+            color: #FFFFFF;
+            font-size: 2rem;
+            font-weight: bold;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px auto;
+            width: 300px;
+            text-align: center;
+            box-shadow: 0 4px 10px rgba(0, 255, 0, 0.5);
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+                box-shadow: 0 0 20px rgba(0, 255, 0, 0.8);
+            }
+            50% {
+                transform: scale(1.1);
+                box-shadow: 0 0 30px rgba(0, 255, 0, 1);
+            }
+            100% {
+                transform: scale(1);
+                box-shadow: 0 0 20px rgba(0, 255, 0, 0.8);
+            }
+        }
+
+        .gifts-section {
+            background: rgba(255, 165, 0, 0.3);
+            padding: 20px;
+            border-radius: 10px;
+            margin: 40px auto;
+            max-width: 600px;
+            text-align: center;
+            box-shadow: 0 4px 10px rgba(34, 139, 34, 0.5);
+        }
+
+        .gifts-section h2 {
+            font-size: 2rem;
+            margin-bottom: 15px;
+            color: #1C1C1C;
+        }
+
+        .gifts-section ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .gifts-section li {
+            font-size: 1.1rem;
+            color: #000000;
+            margin-bottom: 10px;
+        }
+
+        footer {
+            background: rgba(0, 0, 0, 0.8);
+            text-align: center;
+            padding: 10px;
+            color: #FFFFFF;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Claim Your Exclusive Gift Today!</h1>
+    </header>
+
+    <div class="link-container">
+        <div class="choose-gift-box">
+            Choose Your Gift
+        </div>
+    </div>
+
+    <div class="logo-links-container">
+        <div class="logo-link">
+            <a href="https://temu.to/m/ua1s7sfdanf" target="_blank">
+                <img src="Temu-Logo-2024.jpg" alt="Logo Temu Link 1">
+            </a>
+        </div>
+        <div class="logo-link">
+            <a href="https://app.temu.com/m/n8ubbh0qdb1" target="_blank">
+                <img src="Temu-Logo-2024.jpg" alt="Logo Temu Link 2">
+            </a>
+        </div>
+    </div>
+
+    <div class="cta-section">
+        <h2>Everything is built to provide an easy and pleasant experience!</h2>
+
+        <!-- Tabelul cu sliderul pentru produse -->
+        <div class="product-slider-container">
+            <div class="product-slider">
+                <!-- Produse originale -->
+                <a href="https://temu.to/k/e5gmycmh74v" target="_blank">
+                    <img src="185.jpg" alt="Product 1">
+                </a>
+                <a href="https://temu.to/k/ecawp94e04ohttps://temu.to/k/e03swmtrfg7" target="_blank">
+                    <img src="186.jpg" alt="Product 2">
+                </a>
+                <a href="https://temu.to/k/ecawp94e04o" target="_blank">
+                    <img src="187.jpg" alt="Product 3">
+                </a>
+                <a href="https://temu.to/k/eve7uv5i9bu" target="_blank">
+                    <img src="188.jpg" alt="Product 4">
+                </a>
+                <a href="https://temu.to/k/ezwa81jfscd" target="_blank">
+                    <img src="189.jpg" alt="Product 5">
+                </a>
+                <a href="https://temu.to/k/etpyj048mmg" target="_blank">
+                    <img src="190.jpg" alt="Product 6">
+                </a>
+                <a href="https://temu.to/k/efkz3slwf4u" target="_blank">
+                    <img src="191.jpg" alt="Product 7">
+                <!-- Copii pentru bucla infinita -->
+                <!-- Produse originale -->
+                <a href="https://temu.to/k/e5gmycmh74v" target="_blank">
+                    <img src="185.jpg" alt="Product 1">
+                </a>
+                <a href="https://temu.to/k/ecawp94e04ohttps://temu.to/k/e03swmtrfg7" target="_blank">
+                    <img src="186.jpg" alt="Product 2">
+                </a>
+                <a href="https://temu.to/k/ecawp94e04o" target="_blank">
+                    <img src="187.jpg" alt="Product 3">
+                </a>
+                <a href="https://temu.to/k/eve7uv5i9bu" target="_blank">
+                    <img src="188.jpg" alt="Product 4">
+                </a>
+                <a href="https://temu.to/k/ezwa81jfscd" target="_blank">
+                    <img src="189.jpg" alt="Product 5">
+                </a>
+                <a href="https://temu.to/k/etpyj048mmg" target="_blank">
+                    <img src="190.jpg" alt="Product 6">
+                </a>
+                <a href="https://temu.to/k/efkz3slwf4u" target="_blank">
+                    <img src="191.jpg" alt="Product 7">
+                
+            </div>
+        </div>
+    </div>
+
+    <div class="win-box">
+        WIN &#x20AC;200
+    </div>
+
+    <div class="gifts-section">
+        <h2>Exclusive Gifts Available!</h2>
+        <ul>
+            <li>&#x2B50; Get &#x20AC;200 directly in the Temu app: <a href="https://app.temu.com/m/n8ubbh0qdb1" target="_blank">https://app.temu.com/m/n8ubbh0qdb1</a></li>
+            <li>&#x2B50; Search apy16506 for &#x20AC;40% off! &#x1F6CD;&#xFE0F; Free shipping &#x2705; and free returns for 90 days &#x2705;</li>
+            <li>&#x2B50; Learn more about the &#x20AC;200 coupon pack >> <a href="https://temu.to/m/ua1s7sfdanf" target="_blank">https://temu.to/m/ua1s7sfdanf</a></li>
+            <li>&#x2B50; Another surprise for you! Click <a href="https://temu.to/k/eokzuodum36" target="_blank">https://temu.to/k/eokzuodum36</a> or search iny51670 to earn with me!</li>
+        </ul>
+    </div>
+
+    <footer>
+       &copy; 2024 GiveawayCupons. All Rights Reserved.Created with &#x2764;&#xFE0F; for our users.
+  
+    </footer>
+ <script>
+        const slider = document.getElementById('slider');
+        const sliderItems = slider.children;
+        const totalWidth = Array.from(sliderItems).reduce((acc, item) => acc + item.offsetWidth, 0);
+
+        const cloneSlider = () => {
+            Array.from(sliderItems).forEach(item => {
+                const clone = item.cloneNode(true);
+                slider.appendChild(clone);
+            });
+        };
+
+        cloneSlider();
+
+        let currentTranslate = 0;
+
+        const slide = () => {
+            currentTranslate -= 1;
+            if (Math.abs(currentTranslate) >= totalWidth) {
+                currentTranslate = 0;
+            }
+            slider.style.transform = translateX(${currentTranslate}px);
+            requestAnimationFrame(slide);
+        };
+
+        requestAnimationFrame(slide);
+    </script>
+
+</body>
+</html>
